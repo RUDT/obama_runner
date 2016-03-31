@@ -30,7 +30,7 @@ function Game (stage,attributes,objects) {
 		"bloodYmax":20,
 		"chickenBloodRatio":2,
 	};
-	this.obama=new Obama(50,300,80,1,"imgSrc");
+	//this.obama=new Obama(50,300,80,1,"imgSrc");
 	this.update=function  (input,param) {
 		//UPDATE OBJECTS
 		for (var i = this.currentMenuObjects.length - 1; i >= 0; i--) {
@@ -53,6 +53,11 @@ function Game (stage,attributes,objects) {
 		//UPDATE TIMED EVENTS
 		for (var i = this.timers.length - 1; i >= 0; i--) {
 			this.timers[i].update();
+		};
+		//JUMP
+		if (param==0) {
+			
+			this.doJump();
 		};
 		//GAME SPECIFIC////////////////////////////////////////////////////////////////////////////////////////
 
@@ -109,6 +114,13 @@ function Game (stage,attributes,objects) {
 	this.stageEnded=function  (argument) {
 		console.log("stage finished");
 	};
+	this.doJump=function  () {
+    	//AUDIO
+    	//sounds.playSound("jump");
+    	//OBJECT FUNCTION
+    	//console.log(this.gameObjects["player"])
+    	this.gameObjects["player"][0].jump(this.gameAttributes);
+    };
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//CUSTOM/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
