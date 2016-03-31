@@ -33,7 +33,16 @@ function Obama (x,y,size,speed) {
     //RECT
     this.rect=new Rect(x,y,this.size,this.size);
     this.dead=0;
-    this.speed=speed;
+    this.speed=3;
+    this.energy=100;
+
+    this.yVector=0;
+    this.yMax=28;
+
+    this.jumpAcceleration=16;
+    this.jumpMax=-46;
+    this.stopJump=0;
+    this.fartTime=40;
     
     this.update=function  () {
         this.rect.set(this.x,this.y);

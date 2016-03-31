@@ -16,6 +16,20 @@ function Game (stage,attributes,objects) {
 	this.gameAttributes=attributes;
 	this.gameObjects=objects;
 	//
+	this.gameAttributes={
+		"drainRate":1/40,
+		"jumpCost":8,
+		"gravity":1,
+		"boostAdd":50,
+		//BLOOD STATS
+		"bloodAmount":30,
+		"bloodBaseSize":10,
+		"bloodSizeVariance":110,
+		"bloodSpeedVariance":20,
+		"bloodSplatter":40,
+		"bloodYmax":20,
+		"chickenBloodRatio":2,
+	};
 	this.obama=new Obama(50,300,80,1,"imgSrc");
 	this.update=function  (input,param) {
 		//UPDATE OBJECTS
