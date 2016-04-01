@@ -55,6 +55,7 @@ function Obama (x,y,size,speed) {
         if (this.yVector<this.yMax) {
             this.yVector+=paramDic["gravity"];
         };
+        //
         if (this.y>300) {
             this.y=300;
             this.stopJump=1;
